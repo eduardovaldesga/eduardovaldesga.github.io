@@ -1,2 +1,4 @@
 ## Simulación de sistemas
-Una simulación es la reproducción o imitación computacional de un fenómeno del mundo real. Está acompañada de de un previo análisis estadístico de la información en vía de lograr la abstracción del sistema. 
+Puede entenderse un sistema como una colección de entidades que se relacionan como un todo y se encuentran restringidas por condiciones espaciales, temporales, etc. 
+
+Una simulación es la reproducción o imitación computacional de un fenómeno del mundo real. Está acompañada de un previo análisis estadístico en vía de modelar el sistema. Las relaciones establecidas 
