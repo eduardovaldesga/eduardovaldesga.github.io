@@ -1,8 +1,2 @@
 theme: jekyll-theme-dinky
 title: bienvenidos!!!
-
-# File: _config.yml
-webrick:
-  headers:
-    My-Header: My-Value
-    My-Other-Header: My-Other-Value
