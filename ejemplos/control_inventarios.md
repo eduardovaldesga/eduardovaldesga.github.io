@@ -16,3 +16,6 @@ Para diferenciar la distribución por mes se consideran los siguientes factores 
 |--|--|--|--|--|-|-|-|-|-|-|-|-|
 |Factor|1.2|1|0.9|0.8|0.8|0.7|0.8|0.9|1|1.2|1.3|1.4|
 
+```R
+
+```
