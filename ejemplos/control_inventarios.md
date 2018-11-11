@@ -17,7 +17,9 @@ Esta simulación emula el control de inventarios de un almacen. Aparece como eje
 
 Gráficamente, la distribución luce así
 
-![](distr_demanda.png)
+|![1](distr_demanda.png)|
+|:--:|
+|*Figura 1. Distribución empírica de la demanda*|
 
 Para diferenciar la distribución por mes se consideran los siguientes factores de estacionalidad:
 
@@ -28,3 +30,7 @@ Para diferenciar la distribución por mes se consideran los siguientes factores 
 El costo por hacer una orden es de $100, el costo anual por unidad en inventario es de $20 y el costo de penalización por una unidad faltante es de $50. El inventario inicial es de 150 unidades.
 
 Como ejemplo, supongamos que el nivel de reorden del almacen es de 100 unidades; es decir, cuando el nivel del inventario sea menor igual a este nivel, se debe hacer una orden. La cantidad de unidades que se ordena en este caso se asume de 200 unidades. 
+
+|![2](simulacion_inventario.png)|
+|:--:| 
+| *Figura 2. Simulación del inventario durante un año* |
