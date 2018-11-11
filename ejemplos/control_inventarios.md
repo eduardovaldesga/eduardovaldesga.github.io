@@ -31,6 +31,6 @@ El costo por hacer una orden es de $100, el costo anual por unidad en inventario
 
 Como ejemplo, supongamos que el nivel de reorden del almacen es de 100 unidades; es decir, cuando el nivel del inventario sea menor igual a este nivel, se debe hacer una orden. La cantidad de unidades que se ordena en este caso se asume de 200 unidades. 
 
-|![2](simulacion_inventario.png)|
+|![2](simulacion_inventario.pdf)|
 |:--:| 
 | *Figura 2. Simulación del inventario durante un año* |
