@@ -29,7 +29,7 @@ Para diferenciar la distribución por mes se consideran los siguientes factores 
 
 El costo por hacer una orden es de $100, el costo anual por unidad en inventario es de $20 y el costo de penalización por una unidad faltante es de $50. El inventario inicial es de 150 unidades.
 
-Como ejemplo, supongamos que el nivel de reorden del almacen es de 100 unidades; es decir, cuando el nivel del inventario sea menor igual a este nivel, se debe hacer una orden. La cantidad de unidades que se ordena en este caso se asume de 200 unidades. La Figura 2 muestra gráficamente la simulación. Comienza primero con un inventario de 150, la primer demanda promedio simulada es de 48 unidades; utilizando el factor de estacionalidad, la demanda es de `48*1.2=57`
+Como ejemplo, supongamos que el nivel de reorden del almacen es de 100 unidades; es decir, cuando el nivel del inventario sea menor igual a este nivel, se debe hacer una orden. La cantidad de unidades que se ordena en este caso se asume de 200 unidades. La Figura 2 muestra gráficamente la simulación, la linea en verde representa el nivel de reorden. Comienza primero con un inventario de 150, la primer demanda promedio simulada es de 48 unidades; utilizando el factor de estacionalidad, la demanda es de `48(1.2)=57` unidades. Así, al final del mes el inventario será de `150-57=93`unidades; por lo tanto, se debe hacer una orden. El tiempo de entrega para ésta orden es de 3 meses, 
 
 |![2](simulacion_inventario.png)|
 |:--:| 
