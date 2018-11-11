@@ -29,7 +29,11 @@ Para diferenciar la distribución por mes se consideran los siguientes factores 
 
 El costo por hacer una orden es de $100, el costo anual por unidad en inventario es de $20 y el costo de penalización por una unidad faltante es de $50. El inventario inicial es de 150 unidades.
 
-Como ejemplo, supongamos que el nivel de reorden del almacen es de 100 unidades; es decir, cuando el nivel del inventario sea menor igual a este nivel, se debe hacer una orden. La cantidad de unidades que se ordena en este caso se asume de 200 unidades. La Figura 2 muestra gráficamente la simulación, la linea en verde representa el nivel de reorden. Comienza primero con un inventario de 150, la primer demanda promedio simulada es de 48 unidades; utilizando el factor de estacionalidad, la demanda es de `48(1.2)=57` unidades. Así, al final del mes el inventario será de `150-57=93`unidades; por lo tanto, se debe hacer una orden. El tiempo de entrega para ésta orden es de 3 meses, 
+Como ejemplo, supongamos que el nivel de reorden del almacen es de 100 unidades; es decir, cuando el nivel del inventario sea menor igual a este nivel, se debe hacer una orden. La cantidad de unidades que se ordena en este caso se asume de 200 unidades. La Figura 2 muestra gráficamente la simulación, la linea en verde representa el nivel de reorden. Comienza primero con un inventario de 150, la primer demanda promedio simulada es de 43 unidades; utilizando el factor de estacionalidad, la demanda es de `43(1.2)=51` unidades. Así, al final del mes el inventario será de `150-51=99`unidades; por lo tanto, se debe hacer una orden. El tiempo de entrega para ésta orden es de tres meses, por lo que en el mes cuatro hay un aumento de 200 unidades. Una orden se hace siempre y cuando el inventario esté por debajo del nivel de reorden y no haya una orden en curso, por eso no se ordenó en los meses dos y tres. Del mismo modo, la simulación transcurre hasta que en el mes seis se hace otra orden y de nuevo en el noveno mes, éstas con tiempo de entrega de dos y un meses, respectivamente. Note además que en el séptimo mes el inventario se encuentra en -3 unidades, por lo que se debe pagar penalización por tres unidaees faltantes. La siguiente tabla muestra a detalle los resultados de la simulación:
+
+|Mes|Inventario|Demanda|Faltante|Orden|Costo|
+|:--:|:-------:|:-----:|:------:|:---:|:---:|
+|1|150|51||1|150(1.67)+100|
 
 |![2](simulacion_inventario.png)|
 |:--:| 
