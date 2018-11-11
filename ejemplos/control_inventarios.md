@@ -34,9 +34,23 @@ Como ejemplo, supongamos que el nivel de reorden del almacen es de 100 unidades;
 |Mes|Inventario|Demanda|Faltante|Orden|Costo|
 |:--:|:-------:|:-----:|:------:|:---:|:---:|
 |1|150|51||1|150(1.67)+100|
+|2|99|42|||99*(1.67)|
+|3|57|44|||57(1.67)|
+|4|13|55|||13(1.67)|
+|5|158|53|||158(1.67)|
+|6|105|49|||105(1.67)|
+|7|56|59||2|56(1.67)+100|
+|8|0|52|3||3(50)|
+|9|145|51|||145(1.67)|
+|10|94|55||3|94(1.67)+100|
+|11|239|37|||239(1.67)|
+|12|202|59|||202(1.67)|
+|||||**Total**|2646.05|
+
 
 |![2](simulacion_inventario.png)|
 |:--:| 
 | *Figura 2. Simulación del inventario durante un año* |
 
 
+El costo anual de operación del almacen asciende a $2646.05.
