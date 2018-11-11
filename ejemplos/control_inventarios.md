@@ -8,11 +8,9 @@ demanda=data.frame(cantidad=35:60,probabilidad=c(0.01,0.015,0.02,0.02,0.022,0.02
 plot(demanda,type="l",main="Distribución empírica de demanda")
 ```
 
+![](distr_demanda.png)
 
-
-
-
-con factores de estacionalidad como los siguientes:
+Para diferenciar la distribución por mes se consideran los siguientes factores de estacionalidad:
 
 |Mes|1|2|3|4|5|6|7|8|9|10|11|12|
 |--|--|--|--|--|-|-|-|-|-|-|-|-|
