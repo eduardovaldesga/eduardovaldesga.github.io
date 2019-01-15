@@ -4,7 +4,7 @@
 eduardovaldesga@uanl.edu.mx
 
 #### Investigación
-[A multi-step multi-objective generation expansion planning model - A case study in Mexico.](http://www.ijsgce.com/uploadfile/2018/0613/20180613054902248.pdf) R. Palacios, E. Valdés, R. Batres. International Journal of Smart Grid and Clean Energy. 2018. 
+[A multi-step multi-objective generation expansion planning model - A case study in Mexico.](http://www.ijsgce.com/uploadfile/2018/0613/20180613054902248.pdf) R. Palacios, E. Valdés, R. Batres. *International Journal of Smart Grid and Clean Energy*. **2018**. 
 
 
 #### Proyectos
