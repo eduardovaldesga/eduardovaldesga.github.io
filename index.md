@@ -10,7 +10,7 @@ Eduardo tiene interés por la mejora y entendimiento de sistemas de muy diversas
 
 ### Proyectos
 
-####CiberSyn
+#### CiberSyn
 Cibersyn es una aplicación cuyo objetivo es abordar de forma holistica el problema de la planificación enérgética en México; considerando aspectos sociales, ambientales y económicos. La intención de la aplicación es servir de apoyo para la planificación de la Secretaría de Energía (SENER). Actualmente se encuentra en proceso de construcción, se cuenta con algoritmos de optimización, modelos matemáticos y una versión beta de interfaz de usuario.
 
 #### Un enfoque multidisciplinar de la optimización
@@ -19,4 +19,4 @@ El libro "Un enfoque multidisciplinar de la optimización" es un proyecto que ti
 ### Cursos impartidos
 [Modelación de Sistemas](modelacion.md) (Primavera 2019) [U-Erre]
 
-[Clase de Simulación](simulacion.md)
+
