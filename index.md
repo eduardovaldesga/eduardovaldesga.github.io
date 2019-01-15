@@ -16,6 +16,13 @@ Cibersyn es una aplicación cuyo objetivo es abordar de forma holistica el probl
 #### Un enfoque multidisciplinar de la optimización
 El libro "Un enfoque multidisciplinar de la optimización" es un proyecto que tiene como intención divulgar el uso y posibles aplicaciones de la optimización. El libro cuenta con aportaciones de Medicos, Linguistas, Fisicos, Empresarios, Ingenieros en materiales e Investigadores que han plasmado su visión de como la optimización se aplica y sirve en cada una de sus areás de especialidad. Actualmente, el libro se encuentra en proceso de edición por la Universidad de Burgos, España.
 
+#### HEValue
+HEValue es un software en desarrollo para realizar avaluos inmobiliarios. La aplicación pretende disminuir el factor
+subjetivo haciendo uso de herramientas estadísticas, financieras y de inteligencia artificial; proporcionando al valuador un
+avaluo certero y apegado a la realidad.
+
+
+
 ### Cursos impartidos
 [Modelación de Sistemas](modelacion.md) (Primavera 2019) [U-Erre]
 
