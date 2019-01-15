@@ -1,6 +1,6 @@
 # Modelación de Sistemas (Primavera 2019)
 
-Objetivo
+## Objetivo
 Que el alumno realice una simulación de un sistema real, conozca las ventajas y limitaciones de su modelación y, tome decisiones para resolver una problemática de su interés.
 
 ## Evaluación
@@ -44,4 +44,8 @@ Las calificaciones máximas obtenidas por los apartados 5, 6, 7 y 8 del reporte 
 ### Participación (10 pts)
 
 ### Presentación de la simulación (10 pts)
+
+
+## Simulaciones
+[Control de inventarios](inventarios.md)
 
