@@ -49,3 +49,5 @@ Las calificaciones máximas obtenidas por los apartados 5, 6, 7 y 8 del reporte 
 ## Simulaciones
 [Control de inventarios](inventarios.md)
 
+[Linea de producción](linea_produccion.md)
+
