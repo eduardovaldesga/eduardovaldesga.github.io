@@ -1,5 +1,5 @@
 ## Eduardo Valdés García
-eduardovaldesga@uanl.edu.mx
+eduardo.valdesga@uanl.edu.mx
 
 Eduardo tiene interés por la mejora y entendimiento de sistemas de muy diversas índoles. Ha participado en proyectos con empresas y universidades utilizando técnicas de optimización y simulación para resolver problemas de naturaleza práctica en logística, manufactura, medicina, entre otros. Actualmente, dedica esfuerzos y ofrece asesoría en la optimización de problemas de distribución energética, agricultura, industria alimenticia y adhesión de materiales.
 
