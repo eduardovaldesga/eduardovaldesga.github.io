@@ -10,7 +10,6 @@ Los datos históricos del volumen de ventas diario durante un año se encuentran
 |:--:| 
 | *Figura 1. Comportamiento de la demanda. Fuente: propia* |
 
-![alt text](comportamiento_demanda.png)
 
 El precio de venta del producto es de $160 por unidad. El costo diario por unidad en inventario es de $5. La empresa se compromete a siempre entregar el producto al cliente; si hace falta una unidad, la empresa la compra a un tercero a un costo de $200.
 
