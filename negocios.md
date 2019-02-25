@@ -9,6 +9,6 @@ El volumen de ventas (`volumen.ventas`) y el precio de venta (`precio.venta`) so
 * En un "mercado adecuado", se esperan vender 75 mil unidades a un precio medio de $10 por unidad.
 * En un "mercado rápido", se esperan vender 100 mil unidades a un precio medio de $8 por unidad.
 
-El costo unitario por unidad (`costo.unitario`) también es variable y depende de los proveedores y la producción. Se estima que los costos unitarios varien entre %5.50 y $7.50, con un costo más probable de $6.50.
+El costo unitario por unidad (`costo.unitario`) también es variable y depende de los proveedores y la producción. Se estima que los costos unitarios varien entre $5.50 y $7.50, con un costo más probable de $6.50.
 
 Realice la simulación de la venta del nuevo producto y estime la ganacia neta anual. Realice al menos 5 repeticiones de la simulación para tener una mejor estimación.
