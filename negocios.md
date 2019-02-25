@@ -2,7 +2,7 @@
 
 Usted es el gerente de marketing de una empresa que planea la introducción de un nuevo producto. Se necesita estimar la ganancia neta del primer año de este producto. La ganancia neta se calcula como: `ganancia.neta=volumen.ventas(precio.venta-costo.unitario)-costos.fijos`. 
 
-Los costos fijos (`costos.fijos`) por publicidad, gastos generales, etc, se conocen y son de $120,000 al año. 
+Los costos fijos (`costos.fijos`) por publicidad, gastos generales, etc, se conocen y son de $120 mil al año. 
 
 El volumen de ventas (`volumen.ventas`) y el precio de venta (`precio.venta`) son variables y dependen de la competencia. Se conocen tres tipos de mercados (lento, adecuado y rápido) con la misma probabilidad de ocurrencia:
 * En un "mercado lento", se esperan vender 50 mil unidades a un precio medio de $11 por unidad.
