@@ -52,4 +52,4 @@ Las calificaciones máximas obtenidas por los apartados 5, 6, 7 y 8 del reporte 
 [Linea de producción](linea_produccion.md)
 
 ## Ejercicios
-[Control de inventarios](
+[Control de inventarios](ejercicio_inventarios.md)
