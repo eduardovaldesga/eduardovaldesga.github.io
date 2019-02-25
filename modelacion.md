@@ -19,12 +19,18 @@ Las calificaciones máximas obtenidas por los apartados (para obtener 100) del r
 La presentación será en clase con una duración de 20 a 25 minutos. Tome como objetivo que su público entienda su sistema a simular, su problemática y el origen de los datos.  Se califica el diseño de la presentación, desenvolvimiento y elocuencia del ponente y, el interés del público. La presentación representa el 10% faltante en la ponderación del reporte.
 
 ### Segundo Parcial (30 pts)
-#### Evaluación de la simulación. 
+#### Evaluación de la simulación (40%)
 
 * **Representación de procesos y entidades:** Representar todos los procesos y entidades del sistema (procesos de producción, máquinas, servicios, operarios, etc)
 * **Relacionar procesos:** Representar las relaciones entre los procesos y entidades (secuencias, esperas, conexiones, etc)
 
-Las ponderaciones respectivamente son 50% y 50%. Se califica proporcionalmente a la cantidad de procesos y entidades de cada sistema. El código debe estar debidamente comentado.  Hay 15% de ponderación extra si la simulación ya tiene en consideración el tiempo.
+El código debe estar debidamente comentado.
+
+#### Tareas (20%)
+
+#### Simulación control de inventarios (40%)
+
+
 
 ### Tercer Parcial (40 pts)
 #### Entrega del reporte final, continuación del primero. El reporte describe el sistema a simular, la obtención de la información, aspectos básicos de la simulación y; principalmente, incluye un análisis del sistema simulado, toma de decisiones sobre la problemática y conclusiones.
