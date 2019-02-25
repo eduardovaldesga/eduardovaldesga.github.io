@@ -51,21 +51,5 @@ Las calificaciones máximas obtenidas por los apartados 5, 6, 7 y 8 del reporte 
 
 [Linea de producción](linea_produccion.md)
 
-
-## Puntaje
-
-|  Alumno |1. Reporte  |2. Simulación   |3. Resultados   | 
-|---------|------------|----------------|----------------|
-|         |30 pts      |  30 pts        |  40 pts        |
-|  David  | 17         |                |                |
-|  Ilse   |  20*       |                |                |
-|  Juan   |  21        |                |                |
-|  Paola  |  30*       |                |                |
-|  Rogelio|  25        |                |                |
-
-+------------+---------+
-|    Type    |  MySQL  |
-+------------+---------+
-| Header     | Top Row |
-| Auto Align | On      |
-+------------+---------+
+## Ejercicios
+[Control de inventarios](
