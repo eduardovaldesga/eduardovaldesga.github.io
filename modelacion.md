@@ -58,3 +58,4 @@ Las calificaciones máximas obtenidas por los apartados 5, 6, 7 y 8 del reporte 
 
 ## Ejercicios
 [Control de inventarios](ejercicio_inventarios.md)
+[Negocios](negocios.md)
