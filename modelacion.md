@@ -19,16 +19,13 @@ Las calificaciones máximas obtenidas por los apartados (para obtener 100) del r
 La presentación será en clase con una duración de 20 a 25 minutos. Tome como objetivo que su público entienda su sistema a simular, su problemática y el origen de los datos.  Se califica el diseño de la presentación, desenvolvimiento y elocuencia del ponente y, el interés del público. La presentación representa el 10% faltante en la ponderación del reporte.
 
 ### Segundo Parcial (30 pts)
-#### Evaluación de la simulación (40%)
-
-* **Representación de procesos y entidades:** Representar todos los procesos y entidades del sistema (procesos de producción, máquinas, servicios, operarios, etc)
-* **Relacionar procesos:** Representar las relaciones entre los procesos y entidades (secuencias, esperas, conexiones, etc)
-
-El código debe estar debidamente comentado.
+#### Evaluación (80%)
+Ejemplos y análisis básico utilizando simulación de sistemas. 
+Entregable en un archivo R debidamente comentado con las respuestas solicitadas.
+La evaluación se encuentra disponible [aquí](examen.md).
 
 #### Tareas (20%)
 
-#### Simulación control de inventarios (40%)
 
 
 
