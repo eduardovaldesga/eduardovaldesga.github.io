@@ -1,6 +1,6 @@
 # Segundo examen parcial
 
-Resuleva los siguientes ejercicios utilizando R. Comente debidamente los resultados.
+Resuleva los siguientes ejercicios utilizando R. Comente debidamente los resultados. Los histogramas solicitados deben tener etiquetas adecuadas en los ejes, un titulo descriptivo, color adecuado para la visualización y, la cantidad necesaria de intervalos/quiebres para el análisis.
 
 ## Ejercicio 1 (30 pts):
 Realice la simulación del lanzamiento de un dado. Registre los valores de 5000 lanzamientos y grafique el histograma.
