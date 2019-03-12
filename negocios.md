@@ -4,7 +4,7 @@ Usted es el gerente de marketing de una empresa que planea la introducción de u
 
 Los costos fijos (`costos.fijos`) por publicidad, gastos generales, etc, se conocen y son de $120 mil al año. 
 
-El volumen de ventas (`volumen.ventas`) y el precio de venta (`precio.venta`) son variables y dependen de la competencia. Se conocen tres tipos de mercados (lento, adecuado y rápido) con la misma probabilidad de ocurrencia:
+El volumen de ventas diario (`volumen.ventas`) y el precio de venta (`precio.venta`) son variables y dependen de la competencia. Se conocen tres tipos de mercados (lento, adecuado y rápido) con la misma probabilidad de ocurrencia:
 * En un "mercado lento", se esperan vender 50 mil unidades a un precio medio de $11 por unidad.
 * En un "mercado adecuado", se esperan vender 75 mil unidades a un precio medio de $10 por unidad.
 * En un "mercado rápido", se esperan vender 100 mil unidades a un precio medio de $8 por unidad.
