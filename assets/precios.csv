@@ -1,0 +1,7 @@
+pieza,perfil,color,descripcion,unidadMedida,longitud,codigo,precioUnitario,fechaActualizacion,categoria
+Riel,"2""",hueso,"Riel de 2"" hueso",pieza,610,12069PH,312.92,2023-04-24,perfil
+Jamba,"2""",hueso,"Jamba de 2"" hueso",pieza,610,12050PH,434.27,2023-04-24,perfil
+Cerco chapa,"2""",hueso,"Cerco chapa p/puerta de 2"" hueso",pieza,610,12098PH,268.02,2023-04-24,perfil
+Traslape,"2""",hueso,"Traslape p/ventana de 2"" hueso",pieza,610,12094PH,285.5,2023-04-24,perfil
+Cabezal/zoclo,"2""",hueso,"Cabezal y zoclo de 1.5"" hueso",pieza,610,1564PH,218.91,2023-04-24,perfil
+Intermedio,"2""",hueso,Intermedio p/cuad ligero hueso,pieza,610,12021PH,247.83,2023-04-24,perfil
