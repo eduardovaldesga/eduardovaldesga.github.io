@@ -3,6 +3,7 @@ from pulp import LpProblem, LpMinimize, LpVariable, lpSum
 from itertools import product
 from typing import List
 from pydantic import BaseModel
+import json
 
 
 app = FastAPI()
@@ -13,9 +14,9 @@ class Item(BaseModel):
     longitud: int
 
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+@app.get("/read-info/")
+def read_info():
+    return json.loads(open("./assets/data.json", "r", encoding="utf8").read())
 
 
 @app.get("/optimal-partition/")
