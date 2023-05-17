@@ -4,6 +4,7 @@ from itertools import product
 from typing import List
 from pydantic import BaseModel
 import json
+from github import Github
 
 
 app = FastAPI()
@@ -16,7 +17,22 @@ class Item(BaseModel):
 
 @app.get("/read-info/")
 def read_info():
-    return json.loads(open("./assets/data.json", "r", encoding="utf8").read())
+    g = Github("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")
+    user = g.get_user("eduardovaldesga")
+    repo = user.get_repo("eduardovaldesga.github.io")
+    file_encoded = repo.get_contents("assets/data.json")
+    content = file_encoded.decoded_content.decode("utf-8")
+    return json.loads(content)
+
+
+@app.put("/update-info/")
+def update_info(content=str):
+    g = Github("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")
+    user = g.get_user("eduardovaldesga")
+    repo = user.get_repo("eduardovaldesga.github.io")
+    file_encoded = repo.get_contents("assets/data.json")
+    sha = file_encoded.sha
+    repo.update_file("assets/data.json", "update", content, sha)
 
 
 @app.get("/optimal-partition/")
