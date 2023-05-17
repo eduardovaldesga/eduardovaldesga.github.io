@@ -15,9 +15,12 @@ class Item(BaseModel):
     longitud: int
 
 
+token = "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"
+
+
 @app.get("/read-info/")
 def read_info():
-    g = Github("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")
+    g = Github(token)
     user = g.get_user("eduardovaldesga")
     repo = user.get_repo("eduardovaldesga.github.io")
     file_encoded = repo.get_contents("assets/data.json")
@@ -27,7 +30,7 @@ def read_info():
 
 # @app.put("/update-info/")
 # def update_info(content=str):
-#     g = Github("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")
+#     g = Github(token)
 #     user = g.get_user("eduardovaldesga")
 #     repo = user.get_repo("eduardovaldesga.github.io")
 #     file_encoded = repo.get_contents("assets/data.json")
