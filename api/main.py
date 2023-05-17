@@ -25,14 +25,14 @@ def read_info():
     return json.loads(content)
 
 
-@app.put("/update-info/")
-def update_info(content=str):
-    g = Github("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")
-    user = g.get_user("eduardovaldesga")
-    repo = user.get_repo("eduardovaldesga.github.io")
-    file_encoded = repo.get_contents("assets/data.json")
-    sha = file_encoded.sha
-    repo.update_file("assets/data.json", "update", content, sha)
+# @app.put("/update-info/")
+# def update_info(content=str):
+#     g = Github("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")
+#     user = g.get_user("eduardovaldesga")
+#     repo = user.get_repo("eduardovaldesga.github.io")
+#     file_encoded = repo.get_contents("assets/data.json")
+#     sha = file_encoded.sha
+#     repo.update_file("assets/data.json", "update", content, sha)
 
 
 @app.get("/optimal-partition/")
