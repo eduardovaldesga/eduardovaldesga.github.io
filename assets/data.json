@@ -1,74 +1,74 @@
 [
     {
-        "color": "hueso",
-        "perfil": "2\"",
         "piezas": [
-        {
-            "pieza": "Riel",
-            "id": 1,        
-            "descripcion": "Riel de 2\" hueso",
-            "unidadMedida": "pieza",
-            "longitud": "610",
-            "codigo": "12069PH",
-            "precioUnitario": 312.92,
-            "fechaActualizacion": "2023-04-24",
-            "categoria": "perfil"
-        },
-        {
-            "pieza": "Jamba",
-            "id": 2,
-            "descripcion": "Jamba de 2\" hueso",
-            "unidadMedida": "pieza",
-            "longitud": "610",
-            "codigo": "12050PH",
-            "precioUnitario": 434.27,
-            "fechaActualizacion": "2023-04-24",
-            "categoria": "perfil"
-        },
-        {
-            "pieza": "Cerco chapa",
-            "id": 3,
-            "descripcion": "Cerco chapa p/puerta de 2\" hueso",
-            "unidadMedida": "pieza",
-            "longitud": "610",
-            "codigo": "12098PH",
-            "precioUnitario": 268.02,
-            "fechaActualizacion": "2023-04-24",
-            "categoria": "perfil"
-        },
-        {
-            "pieza": "Traslape",
-            "id": 4,
-            "descripcion": "Traslape p/ventana de 2\" hueso",
-            "unidadMedida": "pieza",
-            "longitud": "610",
-            "codigo": "12094PH",
-            "precioUnitario": 285.5,
-            "fechaActualizacion": "2023-04-24",
-            "categoria": "perfil"
-        },
-        {
-            "pieza": "Cabezal/zoclo",
-            "id": 5,
-            "descripcion": "Cabezal y zoclo de 1.5\" hueso",
-            "unidadMedida": "pieza",
-            "longitud": "610",
-            "codigo": "1564PH",
-            "precioUnitario": 218.91,
-            "fechaActualizacion": "2023-04-24",
-            "categoria": "perfil"
-        },
-        {
-            "pieza": "Intermedio",
-            "id": 6,
-            "descripcion": "Intermedio p/cuad ligero hueso",
-            "unidadMedida": "pieza",
-            "longitud": "610",
-            "codigo": "12021PH",
-            "precioUnitario": 247.83,
-            "fechaActualizacion": "2023-04-24",
-            "categoria": "perfil"
-        }
-        ]
+            {
+                "pieza": "Riel",
+                "id": 1,
+                "descripcion": "Riel de 2\" hueso",
+                "unidadMedida": "pieza",
+                "longitud": "610",
+                "codigo": "12069PH",
+                "precioUnitario": 312.92,
+                "fechaActualizacion": "2023-04-24",
+                "categoria": "perfil"
+            },
+            {
+                "pieza": "Jamba",
+                "id": 2,
+                "descripcion": "Jamba de 2\" hueso",
+                "unidadMedida": "pieza",
+                "longitud": "610",
+                "codigo": "12050PH",
+                "precioUnitario": 434.27,
+                "fechaActualizacion": "2023-04-24",
+                "categoria": "perfil"
+            },
+            {
+                "pieza": "Cerco chapa",
+                "id": 3,
+                "descripcion": "Cerco chapa p/puerta de 2\" hueso",
+                "unidadMedida": "pieza",
+                "longitud": "610",
+                "codigo": "12098PH",
+                "precioUnitario": 268.02,
+                "fechaActualizacion": "2023-04-24",
+                "categoria": "perfil"
+            },
+            {
+                "pieza": "Traslape",
+                "id": 4,
+                "descripcion": "Traslape p/ventana de 2\" hueso",
+                "unidadMedida": "pieza",
+                "longitud": "610",
+                "codigo": "12094PH",
+                "precioUnitario": 285.5,
+                "fechaActualizacion": "2023-04-24",
+                "categoria": "perfil"
+            },
+            {
+                "pieza": "Cabezal/zoclo",
+                "id": 5,
+                "descripcion": "Cabezal y zoclo de 1.5\" hueso",
+                "unidadMedida": "pieza",
+                "longitud": "610",
+                "codigo": "1564PH",
+                "precioUnitario": 218.91,
+                "fechaActualizacion": "2023-04-24",
+                "categoria": "perfil"
+            },
+            {
+                "pieza": "Intermedio",
+                "id": 6,
+                "descripcion": "Intermedio p/cuad ligero hueso",
+                "unidadMedida": "pieza",
+                "longitud": "610",
+                "codigo": "12021PH",
+                "precioUnitario": 247.83,
+                "fechaActualizacion": "2023-04-24",
+                "categoria": "perfil"
+            }
+        ],
+        "perfil": "2\"",
+        "color": "hueso"
     }
 ]
