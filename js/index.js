@@ -4,8 +4,26 @@ var app = new Vue({
     data: {
         info: null,
         table: [],
+        selected_perfil: null,
+        selected_color: null,
+        selected_codigo: null,
+        perfiles: [{id:1, nombre:"Riel"}, {id:2, nombre:"Jamba"}, {id:3, nombre:"Cerco chapa"}, {id:4, nombre:"Traslape"}, {id:5, nombre:"Cabezal/zoclo"}, {id:6, nombre:"Intermedio"}]
     },
     methods: {
+      seleccionar_pieza(pieza) {
+        if(this.selected_codigo == pieza.codigo) {
+          this.selected_codigo = null;
+        } else {
+          this.selected_codigo = pieza.codigo;
+        }
+      },
+      guardar_pieza(pieza) {
+        if(this.selected_codigo == pieza.codigo) {
+          this.selected_codigo = null;
+        } else {
+          this.selected_codigo = pieza.codigo;
+        }
+      },
       make_pieces_optimization(perfil, piezas) {
         let longitud = perfil.longitud;
         let url = "https://aluminio.onrender.com/optimal-partition/?"+ new URLSearchParams({
@@ -77,11 +95,11 @@ var app = new Vue({
           },
         })
         .then(response => response.json())
-        .then(data => {console.log(data);});
+        .then(data => {this.info = data;});
       },
     },
     mounted() {
-      this.get_prices();
+      this.get_info();
     }
 })
 

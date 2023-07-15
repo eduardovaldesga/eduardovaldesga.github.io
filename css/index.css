@@ -55,3 +55,33 @@
       flex-grow: 1;
       padding: 20px;
   }
+
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.card th,
+.card td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.card th {
+    background-color: #f2f2f2;
+}
+
+.btn-clicked {
+    background-color: #ccc;
+    color: #fff;
+}
