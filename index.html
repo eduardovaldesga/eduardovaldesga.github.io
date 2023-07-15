@@ -10,16 +10,31 @@
 
 <body>
     <div id="app" class="container-fluid">
-        <div class="col-3 sidebar">
-          <!-- Contenido de la barra lateral -->
-          barra lateral
-        </div>
-        <div class="col-9 main">
-            <!-- Contenido principal de la página -->
-
-            <!-- Tabla -->
-            
-        </div> 
+      <div id="sidebar">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li>
+                <a href="#">Productos</a>
+                <ul>
+                    <li><a href="#">Electrónica</a></li>
+                    <li><a href="#">Ropa</a></li>
+                    <li><a href="#">Hogar</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Servicios</a>
+                <ul>
+                    <li><a href="#">Soporte</a></li>
+                    <li><a href="#">Consultoría</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <h1>Contenido Principal</h1>
+        <p>Este es el contenido principal de la página.</p>
+    </div>
     </div>
 
 
@@ -31,7 +46,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
   <s<script src="https://cdn.jsdelivr.net/npm/@octokit/core@4.2.0/dist-node/index.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@1.0.0/dist/axios.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/vue.resource/1.3.1/vue-resource.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-jsonp@2.0.0/dist/index.min.js"></script>
   <script type="text/javascript" src="js/index.js"></script>   
 </body>
 </html>

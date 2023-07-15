@@ -6,13 +6,52 @@
     height: 100vh;
   }
   
-  /* Estilos para la barra lateral */
-  .sidebar {
-    background-color: #f2f2f2;
-    padding: 20px;
+     /* Estilos básicos */
+     body {
+      margin: 0;
+      padding: 0;
+      display: flex;
   }
   
-  /* Estilos para el contenido principal */
-  .main {
-    padding: 20px;
+  #sidebar {
+      background-color: #333;
+      color: #fff;
+      width: 200px;
+      height: 100vh;
+      padding: 20px;
+  }
+  
+  #sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  }
+  
+  #sidebar ul li {
+      margin-bottom: 10px;
+  }
+  
+  #sidebar ul li a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+  }
+  
+  /* Estilos para los submenús */
+  #sidebar ul ul {
+      display: none;
+      margin-left: 20px;
+  }
+  
+  #sidebar ul li:hover > ul {
+      display: inherit;
+  }
+  
+  #sidebar ul ul li {
+      margin-top: 10px;
+  }
+  
+  #content {
+      flex-grow: 1;
+      padding: 20px;
   }
