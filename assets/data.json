@@ -83,6 +83,17 @@
                 "precioUnitario": "200",
                 "fechaActualizacion": "2023-07-15",
                 "categoria": "perfil"
+            },
+            {
+                "pieza": "Jamba",
+                "id": 2,
+                "descripcion": "fabi",
+                "unidadMedida": "pieza",
+                "longitud": 610,
+                "codigo": "jdsjkfshf",
+                "precioUnitario": "10",
+                "fechaActualizacion": "2023-07-15",
+                "categoria": "perfil"
             }
         ],
         "perfil": "2\"",
