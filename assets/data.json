@@ -68,17 +68,6 @@
                 "categoria": "perfil"
             },
             {
-                "pieza": "Intermedio",
-                "id": null,
-                "descripcion": null,
-                "unidadMedida": null,
-                "longitud": 610,
-                "codigo": null,
-                "precioUnitario": null,
-                "fechaActualizacion": "2023-07-15",
-                "categoria": null
-            },
-            {
                 "pieza": "Cerco chapa",
                 "id": null,
                 "descripcion": null,
