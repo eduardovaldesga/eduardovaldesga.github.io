@@ -70,5 +70,22 @@
         ],
         "perfil": "2\"",
         "color": "hueso"
+    },
+    {
+        "piezas": [
+            {
+                "pieza": "Jamba",
+                "id": null,
+                "descripcion": "sfsf",
+                "unidadMedida": "pieza",
+                "longitud": 610,
+                "codigo": "sf",
+                "precioUnitario": "sff",
+                "fechaActualizacion": "2023-07-15",
+                "categoria": "perfil"
+            }
+        ],
+        "perfil": "sf",
+        "color": "sfs"
     }
 ]
