@@ -16,15 +16,10 @@
         <ul>
             <li><a href="#">Inicio</a></li>
             <li>
-                <a href="#">Registro</a>
-                <ul>
-                    <li><a href="#">Perfil 2"</a></li>
-                    <li><a href="#">Perfil 3"</a></li>
-                    
-                </ul>
+                <a href="#" @click="select_menu('registro')">Registro</a>                
             </li>
             <li>
-                <a href="#">Servicios</a>
+                <a href="#">Diseño</a>
                 <ul>
                     <li><a href="#">Soporte</a></li>
                     <li><a href="#">Consultoría</a></li>
@@ -34,53 +29,138 @@
         </ul>
     </div>
     <div id="content">
-      <div v-for="tipo in info" class="card">
-        <h3>Perfil {{tipo.perfil}} color {{tipo.color}}</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Pieza</th>
-                    <th>Código</th>
-                    <th>Descripción</th>
-                    <th>Longitud (cm)</th>
-                    <th>Precio unitario ($)</th>
-                    <th>Fecha de actualización</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="pieza in tipo.piezas">                    
-                    <td v-if="selected_codigo != pieza.codigo">{{pieza.pieza}}</td>
-                    <td v-else><select v-model="pieza.pieza"><option v-for="perfil in perfiles">{{perfil.nombre}}</option></select> </td>
 
-                    <td v-if="selected_codigo != pieza.codigo">{{pieza.codigo}}</td>
-                    <td v-else><input type="text" v-model="pieza.codigo"></td>
-
-                    <td v-if="selected_codigo != pieza.codigo">{{pieza.descripcion}}</td>
-                    <td v-else><input type="text" v-model="pieza.descripcion"></td>
-
-                    <td v-if="selected_codigo != pieza.codigo">{{pieza.longitud}}</td>
-                    <td v-else><input type="text" v-model="pieza.longitud"></td>
-
-                    <td v-if="selected_codigo != pieza.codigo">{{pieza.precioUnitario}}</td>
-                    <td v-else><input type="text" v-model="pieza.precioUnitario"></td>
-
-                    <td v-if="selected_codigo != pieza.codigo">{{pieza.fechaActualizacion}}</td>
-                    <td v-else><input type="text" v-model="pieza.fechaActualizacion"></td>
+      <!--    Menu inicio          -->
+      <!--    Menu registro          -->
+      <div v-if="selected_menu == 'registro'">
+        <div v-for="perfil in info" class="card">
+          <span>
+            <h3>Perfil {{perfil.perfil}} color {{perfil.color}}</h3>
+            <button class="btn btn-danger" @click="eliminar_perfil(perfil)">Eliminar perfil</button>
+          </span>
+          <table>
+              <thead>
+                  <tr>
+                      <th>Pieza</th>
+                      <th>Código</th>
+                      <th>Descripción</th>
+                      <th>Longitud (cm)</th>
+                      <th>Precio unitario ($)</th>
+                      <th>Fecha de actualización</th>
+                      <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr v-for="pieza in perfil.piezas">                    
+                      <td v-if="selected_codigo != pieza.codigo">{{pieza.pieza}}</td>
+                      <td v-else><select v-model="pieza.pieza"><option v-for="perfil in perfiles">{{perfil.nombre}}</option></select> </td>
+  
+                      <td v-if="selected_codigo != pieza.codigo">{{pieza.codigo}}</td>
+                      <td v-else><input type="text" v-model="pieza.codigo"></td>
+  
+                      <td v-if="selected_codigo != pieza.codigo">{{pieza.descripcion}}</td>
+                      <td v-else><input type="text" v-model="pieza.descripcion"></td>
+  
+                      <td v-if="selected_codigo != pieza.codigo">{{pieza.longitud}}</td>
+                      <td v-else><input type="text" v-model="pieza.longitud"></td>
+  
+                      <td v-if="selected_codigo != pieza.codigo">{{pieza.precioUnitario}}</td>
+                      <td v-else><input type="text" v-model="pieza.precioUnitario"></td>
+  
+                      <td v-if="selected_codigo != pieza.codigo">{{pieza.fechaActualizacion}}</td>
+                      <td v-else><input type="text" v-model="pieza.fechaActualizacion"></td>
+                      <td>
+                        <div v-if="selected_codigo != pieza.codigo">
+                          <button  class="btn btn-primary" @click="seleccionar_pieza(pieza)">Editar</button>
+                        </div>
+                        <div v-else>
+                          <button class="btn btn-primary" @click="guardar_pieza(pieza)">Guardar</button><button class="btn btn-danger" @click="eliminar_pieza(perfil, pieza)">Eliminar</button>
+                        </div>
+                      </td>
+                  </tr>
+                  
+                  <tr v-if="selected_perfil==perfil.perfil && selected_color==perfil.color">
+                    <td><select v-model="pieza_new.pieza"><option v-for="perfil in perfiles">{{perfil.nombre}}</option></select> </td>
+                    <td><input type="text" v-model="pieza_new.codigo"></td>
+                    <td><input type="text" v-model="pieza_new.descripcion"></td>
+                    <td><input type="text" v-model="pieza_new.longitud"></td>
+                    <td><input type="text" v-model="pieza_new.precioUnitario"></td>
+                    <td>{{pieza_new.fechaActualizacion}}</td>
                     <td>
-                      <button v-if="selected_codigo != pieza.codigo" class="btn btn-primary" @click="seleccionar_pieza(pieza)">Editar</button>
-                      <button v-else class="btn btn-primary" @click="guardar_pieza(pieza)">Guardar</button>
+                      <button :class="enable_pieza_new()?'btn btn-primary':'btn btn-primary btn-disabled'" @click="guardar_nueva_pieza(perfil)">Guardar</button>
+                      <button class="btn btn-danger" @click="cancelar_nueva_pieza()">Cancelar</button>
                     </td>
-                </tr>
-                <tr>
-                  <td><button class="btn btn-primary" @click="selected_codigo=pieza.codigo">Nueva pieza <i class="fa fa-plus"  ></i></button></td>
-                </tr>             
-            </tbody>
-        </table>
+                  </tr>
+                  <tr v-else>
+                    <td><button class="btn btn-primary" @click="nueva_pieza(perfil)">Nueva pieza <i class="fa fa-plus"  ></i></button></td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+        <div class="card">
+          <div v-if="!selected_new_perfil">
+            <button class="btn btn-primary" @click="iniciar_nuevo_perfil()">Agregar perfil <i class="fa fa-plus"  ></i></button>
+          </div>
+          <div v-else>
+            <h3>Perfil <input type="text" v-model="perfil_new.perfil">  color <input type="text" v-model="perfil_new.color"></h3>
+            <table>
+              <thead>
+                  <tr>
+                      <th>Pieza</th>
+                      <th>Código</th>
+                      <th>Descripción</th>
+                      <th>Longitud (cm)</th>
+                      <th>Precio unitario ($)</th>
+                      <th>Fecha de actualización</th>
+                      <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr v-for="pieza in perfil_new.piezas">                    
+                      <td v-if="selected_codigo != pieza.codigo">{{pieza.pieza}}</td>
+                      <td v-else><select v-model="pieza.pieza"><option v-for="perfil in perfiles">{{perfil.nombre}}</option></select> </td>
+  
+                      <td v-if="selected_codigo != pieza.codigo">{{pieza.codigo}}</td>
+                      <td v-else><input type="text" v-model="pieza.codigo"></td>
+  
+                      <td v-if="selected_codigo != pieza.codigo">{{pieza.descripcion}}</td>
+                      <td v-else><input type="text" v-model="pieza.descripcion"></td>
+  
+                      <td v-if="selected_codigo != pieza.codigo">{{pieza.longitud}}</td>
+                      <td v-else><input type="text" v-model="pieza.longitud"></td>
+  
+                      <td v-if="selected_codigo != pieza.codigo">{{pieza.precioUnitario}}</td>
+                      <td v-else><input type="text" v-model="pieza.precioUnitario"></td>
+  
+                      <td v-if="selected_codigo != pieza.codigo">{{pieza.fechaActualizacion}}</td>
+                      <td v-else><input type="text" v-model="pieza.fechaActualizacion"></td>
+                      <td>
+                        
+                      </td>
+                  </tr>
+                  
+                  <tr v-if="selected_perfil==perfil_new.perfil && selected_color==perfil_new.color">
+                    <td><select v-model="pieza_new.pieza"><option v-for="perfil in perfiles">{{perfil.nombre}}</option></select> </td>
+                    <td><input type="text" v-model="pieza_new.codigo"></td>
+                    <td><input type="text" v-model="pieza_new.descripcion"></td>
+                    <td><input type="text" v-model="pieza_new.longitud"></td>
+                    <td><input type="text" v-model="pieza_new.precioUnitario"></td>
+                    <td>{{pieza_new.fechaActualizacion}}</td>
+                    <td>
+                      <button :class="enable_pieza_new()?'btn btn-primary':'btn btn-primary btn-disabled'" @click="guardar_nueva_pieza(perfil_new)">Guardar</button>
+                      <button class="btn btn-danger" @click="cancelar_nueva_pieza()">Cancelar</button>
+                    </td>
+                  </tr>
+                  <tr v-else>
+                    <td><button class="btn btn-primary" @click="nueva_pieza(perfil_new)">Nueva pieza <i class="fa fa-plus"  ></i></button></td>
+                  </tr>
+              </tbody>
+          </table>
+          </div>
+          
+        </div>
       </div>
-      <div class="card">
-        <button class="btn btn-primary" @click="">Agregar perfil <i class="fa fa-plus"  ></i></button>
-      </div>
+      <!--    Menu diseño          -->
     </div>
   </div>
 

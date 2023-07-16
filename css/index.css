@@ -85,3 +85,23 @@
     background-color: #ccc;
     color: #fff;
 }
+
+.btn-enabled {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-disabled {
+    background-color: #ccc;
+    color: #fff;
+    pointer-events: none;
+}
+
+/* Estilos para el hover */
+#sidebar ul li:hover {
+  background-color: #555;
+}
+
+#sidebar ul li ul li:hover {
+  background-color: #777;
+}
