@@ -8,7 +8,7 @@
                 "unidadMedida": "pieza",
                 "longitud": "610",
                 "codigo": "12069PH",
-                "precioUnitario": 312.92,
+                "precioUnitario": "312.92",
                 "fechaActualizacion": "2023-04-24",
                 "categoria": "perfil"
             },
@@ -70,33 +70,5 @@
         ],
         "perfil": "2\"",
         "color": "hueso"
-    },
-    {
-        "piezas": [
-            {
-                "pieza": "Riel",
-                "id": null,
-                "descripcion": "Ksijdd",
-                "unidadMedida": "pieza",
-                "longitud": 610,
-                "codigo": "Hdhddh",
-                "precioUnitario": "200",
-                "fechaActualizacion": "2023-07-15",
-                "categoria": "perfil"
-            },
-            {
-                "pieza": "Jamba",
-                "id": 2,
-                "descripcion": "fabi",
-                "unidadMedida": "pieza",
-                "longitud": 610,
-                "codigo": "jdsjkfshf",
-                "precioUnitario": "10",
-                "fechaActualizacion": "2023-07-15",
-                "categoria": "perfil"
-            }
-        ],
-        "perfil": "2\"",
-        "color": "Blanco "
     }
 ]
