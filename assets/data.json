@@ -70,5 +70,22 @@
         ],
         "perfil": "2\"",
         "color": "hueso"
+    },
+    {
+        "piezas": [
+            {
+                "pieza": "Jamba",
+                "id": null,
+                "descripcion": "ada",
+                "unidadMedida": "pieza",
+                "longitud": 610,
+                "codigo": "dad",
+                "precioUnitario": "adad",
+                "fechaActualizacion": "2023-07-15",
+                "categoria": "perfil"
+            }
+        ],
+        "perfil": "ad",
+        "color": "addas"
     }
 ]
