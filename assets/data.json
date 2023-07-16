@@ -66,17 +66,6 @@
                 "precioUnitario": 247.83,
                 "fechaActualizacion": "2023-04-24",
                 "categoria": "perfil"
-            },
-            {
-                "pieza": "Jamba",
-                "id": 2,
-                "descripcion": "f",
-                "unidadMedida": "pieza",
-                "longitud": 610,
-                "codigo": "f",
-                "precioUnitario": "f",
-                "fechaActualizacion": "2023-07-15",
-                "categoria": "perfil"
             }
         ],
         "perfil": "2\"",
