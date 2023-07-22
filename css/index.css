@@ -105,3 +105,113 @@
 #sidebar ul li ul li:hover {
   background-color: #777;
 }
+
+/* Estilos para las tarjetas de productos */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.product-card img {
+    max-width: 150px;
+    max-height: 150px;
+    margin-right: 20px;
+}
+
+.product-card-content {
+    flex: 1;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    text-align: left;
+}
+ /* Estilo de hover */
+ .product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.input-block {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.input-line {
+    display: flex;
+    gap: 10px; /* Espacio horizontal entre bloques */
+}
+.input-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+textarea
+{
+  width:100%;
+}
+.textwrapper
+{
+   margin:5px 0;
+  padding:3px;
+}
+.title-block{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right:20px
+}
+
+.btn-with-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #276a0e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 3px;
+}
+
+.btn-icon {
+    margin-right: 10px;
+}

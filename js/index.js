@@ -15,7 +15,22 @@ var app = new Vue({
         },
         selected_new_perfil: false,
         selected_menu: "registro",
-        perfiles: [{id:1, nombre:"Riel"}, {id:2, nombre:"Jamba"}, {id:3, nombre:"Cerco chapa"}, {id:4, nombre:"Traslape"}, {id:5, nombre:"Cabezal/zoclo"}, {id:6, nombre:"Intermedio"}]
+        perfiles: [{id:1, nombre:"Riel"}, {id:2, nombre:"Jamba"}, {id:3, nombre:"Cerco chapa"}, {id:4, nombre:"Traslape"}, {id:5, nombre:"Cabezal/zoclo"}, {id:6, nombre:"Intermedio"}],
+        selected_diseno: null,
+        config:{
+          alto: 120,
+          ancho: 120,
+          num_modulos: 2,
+          linea: "2\"",
+          nombre_cliente: "Josefo Romulo Evaristo",
+          contacto_cliente: "",
+          direccion_cliente: "",
+          fecha_entrega: "",
+          fecha_presupuesto: "",
+          notas: "",
+          
+
+        },
     },
     methods: {
       select_menu(id) {
@@ -180,7 +195,31 @@ var app = new Vue({
         .then(data => {});
         
       },
-      
+      get_piezas_ventanas() {
+        let url = "https://aluminio.onrender.com/piezas-ventana/?"+ new URLSearchParams({
+          ancho: this.config.ancho,
+          alto: this.config.alto,
+          num_modulos: this.config.num_modulos,
+          linea: this.config.linea,
+          });
+        fetch(url, {
+          
+          mode: "cors", // no-cors, *cors, same-origin         
+          
+          headers: {
+            "Content-Type": "application/json",
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Request-Method': 'GET',
+            "Connection": "keep-alive",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Access-Control-Request-Headers": "X-PINGOTHER, Content-Type",
+          },
+          
+        })
+        .then(response => response.json())
+        .then(data => {console.log(data);});
+        
+      },
         get_info() {
     
           let url = "https://aluminio.onrender.com/read-info/";

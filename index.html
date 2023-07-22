@@ -16,13 +16,13 @@
         <ul>
             <li><a href="#">Inicio</a></li>
             <li>
-                <a href="#" @click="select_menu('registro')">Registro</a>                
+                <a href="#Perfiles" @click="select_menu('perfiles')">Perfiles</a>                
             </li>
             <li>
-                <a href="#">Diseño</a>
+                <a href="#Presupuestos">Presupuestos</a>
                 <ul>
-                    <li><a href="#">Soporte</a></li>
-                    <li><a href="#">Consultoría</a></li>
+                    <li><a href="#Presupuestos#Nuevo" @click="select_menu('presupuestos_nuevo')">Nuevo <i class="fa fa-plus"  ></i></a></li>
+                    <li><a href="#Presupuestos#Historico" @click="select_menu('presupuestos_historico')">Historico</a></li>
                 </ul>
             </li>
             <li><a href="#">Contacto</a></li>
@@ -31,8 +31,8 @@
     <div id="content">
 
       <!--    Menu inicio          -->
-      <!--    Menu registro          -->
-      <div v-if="selected_menu == 'registro'">
+      <!--    Menu perfiles          -->
+      <div v-if="selected_menu == 'perfiles'">
         <div v-for="perfil in info" class="card">
           <span>
             <h3>Perfil {{perfil.perfil}} color {{perfil.color}}</h3>
@@ -160,7 +160,126 @@
           
         </div>
       </div>
-      <!--    Menu diseño          -->
+      <!--    Menu Presupuestos          -->
+      <!-- Submenu nuevo -->
+      <div v-if="selected_menu == 'presupuestos_nuevo'">
+        <div v-if="selected_diseno == null" class="grid">
+          <!-- Imagenes de https://alumina.com/productos/ -->
+          <div class="product-card clickable" @click="selected_diseno='corrediza'">
+              <img src="assets/ventana_corrediza.gif" alt="Producto 1">
+              <div class="product-card-content">
+                  <h3>Ventana / Puerta Corrediza</h3>
+                  <p>Ventana con modulos fijos y corredizos.</p>
+                  <p>Linea elegible 2" ó 3". Reticula opcional</p>
+              </div>
+          </div>
+          <div class="product-card clickable" @click="selected_diseno='fija'">
+              <img src="assets/ventana_fija.png" alt="Producto 2">
+              <div class="product-card-content">
+                  <h3>Ventana fija</h3>
+                  <p>Linea elegible 2" ó 3". Reticula opcional</p>
+              </div>
+          </div>
+          <div class="product-card clickable" @click="selected_diseno='panoramica'">
+            <img src="assets/ventana_panoramica.gif" alt="Producto 2">
+            <div class="product-card-content">
+                <h3>Ventana panorámica</h3>
+                <p>Ventana con fijos y secciones corredizas</p>
+                <p>Linea elegible 2" ó 3". Reticula opcional</p>
+            </div>
+          </div>
+          <div class="product-card clickable" @click="selected_diseno='ventana_abatible'">
+            <img src="assets/ventana_abatible.png" alt="Producto 2">
+            <div class="product-card-content">
+                <h3>Ventana abatible</h3>
+                <p>Ventana con modulos abatibles</p>
+                <p>Linea elegible 2" ó 3". Reticula opcional</p>
+            </div>
+          </div>
+          <div class="product-card clickable" @click="selected_diseno='cancel'">
+            <img src="assets/cancel_bano.gif" alt="Producto 2">
+            <div class="product-card-content">
+                <h3>Cancel de baño</h3>
+                <p>Cancel de baño con modulos corredizos</p>
+                <p>Linea elegible</p>
+            </div>
+          </div>
+          <div class="product-card clickable" @click="selected_diseno='puerta_abatible'">
+            <img src="assets/puerta_abatible.png" alt="Producto 2">
+            <div class="product-card-content">
+                <h3>Puerta abatible</h3>
+                <p>Linea elegible</p>
+            </div>
+          </div>
+          <!-- Agrega más tarjetas según tus productos -->
+        </div>
+        <div v-else>
+          <!-- Diseño ventana puerta corrediza -->
+          <div v-if="selected_diseno=='corrediza'">
+            <div class="card">
+              <div class="title-block">
+                <h2>Ventana / Puerta Corrediza</h2>
+                <button class="btn-with-icon">
+                    <i class="fas fa-paper-plane btn-icon"></i> <!-- Icono de FontAwesome -->
+                    Actualizar
+                </button>
+              </div>
+              
+              <div class="input-container">
+                <h4>Configuración</h4>
+                <div class="input-line">
+                  <div class="input-block">
+                    <label >Línea:</label>
+                    <select class="input-field" v-model="config.linea">
+                      <option>2"</option>
+                      <option>3"</option>
+                    </select>
+                  </div>
+                  <div class="input-block">
+                    <label for="numero">Alto (en cm):</label>
+                    <input type="number" id="numero" class="input-field" step=10 min="0" v-model="config.alto"/>
+                  </div>
+                  <div class="input-block">
+                    <label for="numero">Acho (en cm):</label>
+                    <input type="number" id="numero" class="input-field" step=10 min="0" v-model="config.ancho"/>
+                  </div>
+                  <div class="input-block">
+                    <label for="numero">Cantidad de módulos:</label>
+                    <input type="number" id="numero" class="input-field" step=1 min="0" v-model="config.num_modulos"/>
+                  </div>
+                </div>
+              </div>
+              <div class="input-container">
+                <h4>Cliente</h4>
+                <div class="input-line">
+                  <div class="input-block" style="width:300px;">
+                    <label for="numero">Nombre</label>
+                    <input type="text" id="numero" class="input-field" v-model="config.nombre_cliente"/>
+                  </div>
+                  <div class="input-block" style="width:300px;">
+                    <label for="numero">Contacto</label>
+                    <input type="text" id="numero" class="input-field" v-model="config.contacto_cliente"/>
+                  </div>
+                  <div class="input-block" style="width:300px;">
+                    <label for="numero">Dirección</label>
+                    <input type="text" id="numero" class="input-field" v-model="config.direccion_cliente"/>
+                  </div>
+                  <div class="input-block" style="width:300px;">
+                    <label for="numero">Fecha de entrega</label>
+                    <input type="date" id="numero" class="input-field" v-model="config.fecha_entrega"/>
+                  </div>
+                </div>
+              </div>
+              <div class="input-container">
+                <h4>Comentarios</h4>
+                <div class="textwrapper"><textarea cols="2" rows="5" id="rules" v-model="config.notas"></textarea></div>
+                  
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
