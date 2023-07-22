@@ -70,22 +70,5 @@
         ],
         "perfil": "2\"",
         "color": "hueso"
-    },
-    {
-        "piezas": [
-            {
-                "pieza": "Riel",
-                "id": null,
-                "descripcion": "Jfhdydbfb",
-                "unidadMedida": "pieza",
-                "longitud": 610,
-                "codigo": "Hfhdh",
-                "precioUnitario": "200",
-                "fechaActualizacion": "2023-07-15",
-                "categoria": "perfil"
-            }
-        ],
-        "perfil": "2\"",
-        "color": "Blanco "
     }
 ]
