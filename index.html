@@ -219,12 +219,12 @@
             <div class="card">
               <div class="title-block">
                 <h2>Ventana / Puerta Corrediza</h2>
-                <button class="btn-with-icon">
+                <button class="btn-with-icon" @click="get_piezas_ventanas()">
                     <i class="fas fa-paper-plane btn-icon"></i> <!-- Icono de FontAwesome -->
                     Actualizar
                 </button>
               </div>
-              
+              <!-- Configuracion  -->
               <div class="input-container">
                 <h4>Configuración</h4>
                 <div class="input-line">
@@ -249,6 +249,44 @@
                   </div>
                 </div>
               </div>
+              <!-- Detalle de cortes -->
+              <div v-if="ventana.perfiles.length" class="input-container">
+                <div v-for="perfil in ventana.perfiles" class="info-line">
+                  <h4>{{perfil.perfil}} -- {{perfil.total_perfiles}} piezas</h4>
+                  <div v-for="corte in perfil.cortes" :class="corte.total_usado <= 310 ? 'block half':'block complete'">
+                    <div class="subblock usado" :style="{width:100*corte.total_usado/610 +'%'}">
+                      <div v-for="detalle in corte.detalle_piezas" class="sub-subblock" :style="{width:100*detalle.longitud/(corte.total_usado) +'%'}">
+                        <span>{{detalle.desc}}</span>
+                        <span>{{Math.round(detalle.longitud*10)/10}} cm</span>
+                         
+                      </div>
+                    </div>
+                    <div v-if="corte.desperdicio> 10" class="subblock desperdicio" :style="{width:100*corte.desperdicio/610 +'%'}">
+                      <div class="sub-subblock" style="width:100%">
+                        <span>Desperdicio</span>
+                        <span>{{Math.round(corte.desperdicio*10)/10}} cm</span>
+                      </div>  
+                       
+                    </div>
+                  </div>
+                  
+                
+                 <!-- <div v-for="corte in perfil.cortes" :class="corte.total_usado <= 310 ? 'block half':'block complete'">
+                  <div class="subblock" :style="{width:100*corte.total_usado/610 +'%', display:'flex', 'background-color': '#007bff'}">
+                    <div v-for="detalle in corte.detalle_piezas" class="subblock" :style="{width:100*detalle.longitud/(610-corte.desperdicio) +'%'}">
+                      <span>{{detalle.desc}}</span>
+                      <span>{{Math.round(detalle.longitud*10)/10}} cm</span>
+                       
+                    </div>
+                  </div>
+                  <div v-if="corte.desperdicio> 10" class="subblock desperdicio" :style="{width:100*corte.desperdicio/610 +'%'}">
+                      <span>Desperdicio</span>
+                      <span>{{Math.round(corte.desperdicio*10)/10}} cm</span>
+                  </div>
+                  </div> -->
+                </div>
+              </div>
+              <!-- Cliente -->
               <div class="input-container">
                 <h4>Cliente</h4>
                 <div class="input-line">

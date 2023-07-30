@@ -19,7 +19,7 @@ var app = new Vue({
         selected_diseno: null,
         config:{
           alto: 120,
-          ancho: 120,
+          ancho: 320,
           num_modulos: 2,
           linea: "2\"",
           nombre_cliente: "Josefo Romulo Evaristo",
@@ -31,6 +31,7 @@ var app = new Vue({
           
 
         },
+        ventana: {perfiles: []},
     },
     methods: {
       select_menu(id) {
@@ -217,7 +218,7 @@ var app = new Vue({
           
         })
         .then(response => response.json())
-        .then(data => {console.log(data);});
+        .then(data => {this.ventana["perfiles"] = data;});
         
       },
         get_info() {
