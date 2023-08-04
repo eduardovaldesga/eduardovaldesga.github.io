@@ -15,7 +15,8 @@ var app = new Vue({
         },
         selected_new_perfil: false,
         selected_menu: "registro",
-        perfiles: [{id:1, nombre:"Riel"}, {id:2, nombre:"Jamba"}, {id:3, nombre:"Cerco chapa"}, {id:4, nombre:"Traslape"}, {id:5, nombre:"Cabezal/zoclo"}, {id:6, nombre:"Intermedio"}],
+        perfiles: null,
+        colores: null,
         selected_diseno: null,
         config:{
           alto: 120,
@@ -28,14 +29,16 @@ var app = new Vue({
           fecha_entrega: "",
           fecha_presupuesto: "",
           notas: "",
+          color: "hueso"
           
 
         },
-        ventana: {perfiles: []},
+        presupuesto: {perfiles: []},
     },
     methods: {
       select_menu(id) {
         this.selected_menu = id;
+        this.selected_diseno = null;
       },
       iniciar_nuevo_perfil() {
         
@@ -202,6 +205,7 @@ var app = new Vue({
           alto: this.config.alto,
           num_modulos: this.config.num_modulos,
           linea: this.config.linea,
+          color: this.config.color,
           });
         fetch(url, {
           
@@ -218,7 +222,7 @@ var app = new Vue({
           
         })
         .then(response => response.json())
-        .then(data => {this.ventana["perfiles"] = data;});
+        .then(data => {this.presupuesto = data;});
         
       },
         get_info() {
@@ -240,9 +244,49 @@ var app = new Vue({
         .then(response => response.json())
         .then(data => {this.info = data;});
       },
+      read_perfiles() {
+    
+        let url = "https://aluminio.onrender.com/read-perfiles/";
+      fetch(url, {
+        
+        mode: "cors", // no-cors, *cors, same-origin         
+        
+        headers: {
+          "Content-Type": "application/json",
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Request-Method': 'GET',
+          "Connection": "keep-alive",
+          "Accept-Encoding": "gzip, deflate, br",
+          "Access-Control-Request-Headers": "X-PINGOTHER, Content-Type",
+        },
+      })
+      .then(response => response.json())
+      .then(data => {this.perfiles = data;});
+    },
+    read_colores() {
+    
+      let url = "https://aluminio.onrender.com/read-colores/";
+    fetch(url, {
+      
+      mode: "cors", // no-cors, *cors, same-origin         
+      
+      headers: {
+        "Content-Type": "application/json",
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Request-Method': 'GET',
+        "Connection": "keep-alive",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Access-Control-Request-Headers": "X-PINGOTHER, Content-Type",
+      },
+    })
+    .then(response => response.json())
+    .then(data => {this.colores = data;});
+  },
     },
     mounted() {
       this.get_info();
+      this.read_perfiles();
+      this.read_colores();
     },
     watch: {
     }

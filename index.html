@@ -231,8 +231,13 @@
                   <div class="input-block">
                     <label >Línea:</label>
                     <select class="input-field" v-model="config.linea">
-                      <option>2"</option>
-                      <option>3"</option>
+                      <option v-for="perfil in perfiles">{{perfil.linea}}</option>
+                    </select>
+                  </div>
+                  <div class="input-block">
+                    <label >Color:</label>
+                    <select class="input-field" v-model="config.color">
+                      <option v-for="color in colores">{{color.color}}</option>
                     </select>
                   </div>
                   <div class="input-block">
@@ -250,9 +255,12 @@
                 </div>
               </div>
               <!-- Detalle de cortes -->
-              <div v-if="ventana.perfiles.length" class="input-container">
-                <div v-for="perfil in ventana.perfiles" class="info-line">
+              <div v-if="presupuesto.perfiles.length" class="input-container">
+                <h4>Costo estimado material: ${{presupuesto.costo}}</h4>
+                <h4>Precio a cliente: ${{presupuesto.costo*2.4}}</h4>
+                <div v-for="perfil in presupuesto.perfiles" class="info-line">
                   <h4>{{perfil.perfil}} -- {{perfil.total_perfiles}} piezas</h4>
+                  
                   <div v-for="corte in perfil.cortes" :class="corte.total_usado <= 310 ? 'block half':'block complete'">
                     <div class="subblock usado" :style="{width:100*corte.total_usado/610 +'%'}">
                       <div v-for="detalle in corte.detalle_piezas" class="sub-subblock" :style="{width:100*detalle.longitud/(corte.total_usado) +'%'}">
