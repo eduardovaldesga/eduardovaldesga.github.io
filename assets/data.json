@@ -70,5 +70,22 @@
         ],
         "perfil": "2\"",
         "color": "hueso"
+    },
+    {
+        "piezas": [
+            {
+                "pieza": "Cerco chapa",
+                "id": null,
+                "descripcion": "Bbv",
+                "unidadMedida": "pieza",
+                "longitud": 610,
+                "codigo": "Hhgh",
+                "precioUnitario": "Vb",
+                "fechaActualizacion": "2023-08-04",
+                "categoria": "perfil"
+            }
+        ],
+        "perfil": "2\"",
+        "color": "Blanco"
     }
 ]
